@@ -1,0 +1,14 @@
+<h1>Edit Data for <%= @ram.name %></h1>
+<p><%= @error %></p>
+<form action="/places/<%=@ram.id%>" method="post">
+<input type="hidden" name="_method" value="patch">
+<label>Name</label>
+<input type="text" name="ram[name]" value="<%= @ram.name %>">
+<label>Personality</label>
+<input type="text" name="ram[personality]" value="<%= @ram.personality %>">
+<label>Biography</label>
+<input type="text" name="ram[biography]" value="<%= @ram.biography %>">
+<label>Image</label>
+<input type="text" name="ram[image]" value="<%= @ram.image %>">
+<button type="submit">Modify the Hybrid</button>
+</form>
